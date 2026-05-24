@@ -46,11 +46,34 @@
       padding: 28px 32px 30px;
     }
 
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-bottom: 34px;
+    }
+
     .brand {
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: clamp(1.55rem, 1vw + 1rem, 2rem);
       letter-spacing: 0.01em;
-      margin-bottom: 34px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 24px;
+
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .nav a {
+      transition: opacity 0.2s ease;
+    }
+
+    .nav a:hover {
+      opacity: 0.55;
     }
 
     .hero {
@@ -146,11 +169,12 @@
     }
 
     @media (max-width: 700px) {
+
       .page {
         padding: 20px 18px 24px;
       }
 
-      .brand {
+      .topbar {
         margin-bottom: 22px;
       }
 
@@ -166,6 +190,7 @@
       .photo {
         width: 100%;
       }
+
     }
   </style>
 </head>
@@ -174,7 +199,17 @@
 
   <main class="page">
 
-    <div class="brand">Dzulfiqar Galih</div>
+    <div class="topbar">
+
+      <div class="brand">
+        Dzulfiqar Galih Devara
+      </div>
+
+      <nav class="nav">
+        <a href="writings.html">Writings</a>
+      </nav>
+
+    </div>
 
     <section class="hero">
 
@@ -201,6 +236,7 @@
         </p>
 
         <div class="links">
+
           <a href="https://instagram.com/fiqaarr" target="_blank">Instagram</a>
           <span>/</span>
 
@@ -211,16 +247,17 @@
           <span>/</span>
 
           <a href="mailto:galihfiqar@gmail.com">Email</a>
+
         </div>
 
       </div>
 
       <div class="photo-wrap">
-        <div>
-          <div class="photo">
-            <img src="./images/fiqar.jpeg" alt="Portrait of Fiqar">
-          </div>
+
+        <div class="photo">
+          <img src="./images/fiqar.jpeg" alt="Portrait of Fiqar">
         </div>
+
       </div>
 
     </section>

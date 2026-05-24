@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dzulfiqar Galih</title>
+
+  <title>Writings — Dzulfiqar Galih</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,27 +13,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
+
     :root {
       --bg: #f3eadf;
       --text: #231b17;
-      --muted: rgba(35, 27, 23, 0.78);
-      --line: rgba(35, 27, 23, 0.38);
+      --muted: rgba(35, 27, 23, 0.72);
+      --line: rgba(35, 27, 23, 0.12);
     }
 
     * {
       box-sizing: border-box;
     }
 
-    html,
     body {
       margin: 0;
-      min-height: 100%;
       background: var(--bg);
       color: var(--text);
-    }
 
-    body {
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "Inter", sans-serif;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
@@ -42,131 +41,104 @@
     }
 
     .page {
-      min-height: 100vh;
-      padding: 28px 32px 30px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-bottom: 72px;
     }
 
     .brand {
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: clamp(1.55rem, 1vw + 1rem, 2rem);
-      letter-spacing: 0.01em;
-      margin-bottom: 34px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
     }
 
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
-      gap: clamp(32px, 4vw, 88px);
-      align-items: start;
-      min-height: calc(100vh - 110px);
-    }
-
-    .copy {
-      padding-top: clamp(32px, 4vw, 82px);
-      max-width: 760px;
-    }
-
-    .lead {
-      max-width: 680px;
-      font-size: clamp(1.04rem, 0.45vw + 0.96rem, 1.28rem);
-      line-height: 1.9;
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .lead + .lead {
-      margin-top: 24px;
-    }
-
-    .links {
-      margin-top: 38px;
-      display: flex;
-      gap: 14px;
-      align-items: center;
-      flex-wrap: wrap;
+    .back {
       font-size: 0.95rem;
       color: var(--muted);
     }
 
-    .links a {
-      transition: opacity 0.2s ease;
+    .heading {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(3rem, 8vw, 5rem);
+      line-height: 0.95;
+
+      margin: 0 0 18px;
     }
 
-    .links a:hover {
+    .intro {
+      max-width: 680px;
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--muted);
+
+      margin-bottom: 72px;
+    }
+
+    .writing {
+      padding: 32px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .writing:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .writing h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      font-weight: 500;
+
+      margin: 0 0 10px;
+    }
+
+    .meta {
+      font-size: 0.92rem;
+      color: var(--muted);
+
+      margin-bottom: 18px;
+    }
+
+    .writing p {
+      max-width: 680px;
+
+      font-size: 1rem;
+      line-height: 1.9;
+      color: var(--muted);
+
+      margin: 0 0 20px;
+    }
+
+    .read {
+      font-size: 0.95rem;
+    }
+
+    .read:hover {
       opacity: 0.55;
     }
 
-    .links span {
-      opacity: 0.45;
-    }
-
-    .photo-wrap {
-      padding-top: clamp(18px, 2vw, 48px);
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    .photo {
-      width: min(100%, 860px);
-      aspect-ratio: 0.88 / 1;
-      overflow: hidden;
-      border: 1px solid rgba(35, 27, 23, 0.08);
-      box-shadow: 0 14px 44px rgba(0, 0, 0, 0.08);
-      background: rgba(0, 0, 0, 0.04);
-    }
-
-    .photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-      filter: contrast(1.02) saturate(0.95);
-    }
-
-    @media (max-width: 1100px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .copy {
-        max-width: 900px;
-        padding-top: 10px;
-      }
-
-      .photo-wrap {
-        justify-content: flex-start;
-        padding-top: 0;
-      }
-
-      .photo {
-        width: min(100%, 580px);
-        aspect-ratio: 4 / 5;
-      }
-    }
-
     @media (max-width: 700px) {
+
       .page {
-        padding: 20px 18px 24px;
+        padding: 28px 18px 60px;
       }
 
-      .brand {
-        margin-bottom: 22px;
+      .topbar {
+        margin-bottom: 48px;
       }
 
-      .copy {
-        padding-top: 0;
+      .writing h2 {
+        font-size: 1.7rem;
       }
 
-      .lead {
-        font-size: 1.01rem;
-        line-height: 1.8;
-      }
-
-      .photo {
-        width: 100%;
-      }
     }
+
   </style>
 </head>
 
@@ -174,56 +146,61 @@
 
   <main class="page">
 
-    <div class="brand">Dzulfiqar Galih</div>
+    <div class="topbar">
+      <div class="brand">Dzulfiqar Galih</div>
 
-    <section class="hero">
+      <a class="back" href="index.html">
+        Home
+      </a>
+    </div>
 
-      <div class="copy">
+    <h1 class="heading">
+      Writings
+    </h1>
 
-        <p class="lead">
-          You arrived precisely when I’m still figuring out how to make this website from scratch. I was taught how to code HTML when I was still in high school, but I didn’t realize how much I had forgotten.
-        </p>
+    <p class="intro">
+      A growing archive of commentaries and published work spanning international relations, public narratives, politics, and whatever else I find myself unable to stop thinking about.
+    </p>
 
-        <p class="lead">
-          So please wait as I put this website together :)
-        </p>
+    <article class="writing">
 
-        <p class="lead">
-          In the interim, if you'd like to know more about me, allow me to make a proper introduction. My name is Fiqar, I work in strategic communications and public relations at Edelman Indonesia. At the world's #1 communications consultancy firm, I spend most of my time tinkering around public narratives, corporate affairs, and how organizations communicate during moments that actually matter. The past almost half decade at the company has been immensely rewarding and formative for my growth.
-        </p>
+      <h2>
+        Mearsheimer’s presence signals Prabowo’s realist foreign policy approach
+      </h2>
 
-        <p class="lead">
-          My background was far from PR, though. I studied History at Universitas Padjadjaran, wrote my thesis on the role of US foreign policy in Indonesia during the Cold War era, and somehow ended up equally interested in policy, international relations, politics, and the one thing that matters most, sports! When I’m not working, I’m usually watching movies, writing something half-finished, or falling into another Dota "find another match" rabbit hole. The last part really does take a toll on me, so I try to balance it out with going to the gym and having fruitful convos with people closest to me.
-        </p>
-
-        <p class="lead">
-          Do come back soon for my selected work, writings that keep me going, projects I worked on, as well as thoughts &amp; ideas that pop through my head.
-        </p>
-
-        <div class="links">
-          <a href="https://instagram.com/fiqaarr" target="_blank">Instagram</a>
-          <span>/</span>
-
-          <a href="https://www.linkedin.com/in/dzulfiqargalih/" target="_blank">LinkedIn</a>
-          <span>/</span>
-
-          <a href="https://letterboxd.com/fiqar" target="_blank">Letterboxd</a>
-          <span>/</span>
-
-          <a href="mailto:galihfiqar@gmail.com">Email</a>
-        </div>
-
+      <div class="meta">
+        The Jakarta Post · October 2024
       </div>
 
-      <div class="photo-wrap">
-        <div>
-          <div class="photo">
-            <img src="./images/fiqar.jpeg" alt="Portrait of Fiqar">
-          </div>
-        </div>
+      <p>
+        A reflection on realism and the presence of John Mearsheimer’s appearance within Prabowo Subianto’s emerging policy orbit.
+      </p>
+
+      <a class="read" href="https://www.thejakartapost.com/opinion/2024/10/22/mearsheimers-presence-signals-prabowos-realist-foreign-policy-approach.html" target="_blank">
+        Read Essay →
+      </a>
+
+    </article>
+
+    <article class="writing">
+
+      <h2>
+        Socrates on Demeocracy
+      </h2>
+
+      <div class="meta">
+        LSFDiscourse · 2021
       </div>
 
-    </section>
+      <p>
+        Just, majestic.
+      </p>
+
+      <a class="read" href="https://lsfdiscourse.org/pandangan-socrates-mengenai-demokrasi/" target="_blank">
+        Read Essay →
+      </a>
+
+    </article>
 
   </main>
 
