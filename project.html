@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Projects — Dzulfiqar Galih</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --bg: #f3eadf;
+      --text: #231b17;
+      --muted: rgba(35, 27, 23, 0.72);
+      --line: rgba(35, 27, 23, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+
+      font-family: "Inter", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-bottom: 72px;
+    }
+
+    .brand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+    }
+
+    .nav {
+      display: flex;
+      gap: 24px;
+
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .nav a {
+      transition: opacity 0.2s ease;
+    }
+
+    .nav a:hover {
+      opacity: 0.55;
+    }
+
+    .heading {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(3rem, 8vw, 5rem);
+      line-height: 0.95;
+
+      margin: 0 0 24px;
+    }
+
+    .copy {
+      max-width: 760px;
+
+      font-size: 1.08rem;
+      line-height: 2;
+      color: var(--muted);
+    }
+
+    .copy p {
+      margin: 0 0 28px;
+    }
+
+    .logo-strip {
+      margin-top: 72px;
+      overflow: hidden;
+
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+
+      padding: 28px 0;
+    }
+
+    .logo-track {
+      display: flex;
+      align-items: center;
+      gap: 72px;
+
+      width: max-content;
+
+      animation: scrollLogos 28s linear infinite;
+    }
+
+    .logo-track img {
+      height: 34px;
+      width: auto;
+
+      opacity: 0.72;
+      filter: grayscale(100%);
+
+      transition: opacity 0.25s ease;
+    }
+
+    .logo-track img:hover {
+      opacity: 1;
+    }
+
+    @keyframes scrollLogos {
+
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+
+    }
+
+    @media (max-width: 700px) {
+
+      .page {
+        padding: 28px 18px 60px;
+      }
+
+      .topbar {
+        margin-bottom: 52px;
+      }
+
+      .copy {
+        font-size: 1rem;
+        line-height: 1.9;
+      }
+
+      .logo-track {
+        gap: 52px;
+      }
+
+      .logo-track img {
+        height: 28px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <div class="topbar">
+
+      <div class="brand">
+        Dzulfiqar Galih Devara
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">About</a>
+        <a href="writings.html">Writings</a>
+        <a href="projects.html">Projects</a>
+      </nav>
+
+    </div>
+
+    <h1 class="heading">
+      Projects
+    </h1>
+
+    <div class="copy">
+
+      <p>
+        By the end of today, your audience will have scrolled past thousands of messages, headlines, campaigns, statements, launches, and brands all competing for the same sliver of attention. Tomorrow, they’ll remember almost none of them.
+      </p>
+
+      <p>
+        Most communication today feels engineered to exist rather than to resonate. Safe enough to pass bosses' approvals. Loud enough to fill FYPs. Forgettable enough to disappear immediately after.
+      </p>
+
+      <p>
+        I’m interested in the opposite of that.
+      </p>
+
+      <p>
+        My eyes have always been drawn to narratives that feel human. In communications that carry clarity, timing, tension, and intention. In helping organizations speak like they understand the world around them instead of merely reacting to it.
+      </p>
+
+      <p>
+        This page is still under construction, but over time, it will become home to selected communications work, campaigns, strategic narratives, public affairs initiatives, and projects I have had the privilege of contributing to alongside incredible teams at Edelman.
+      </p>
+
+    </div>
+
+    <div class="logo-strip">
+
+      <div class="logo-track">
+
+        <img src="./logos/microsoft.png" alt="Microsoft">
+        <img src="./logos/HP.png" alt="HP">
+        <img src="./logos/Roche.png" alt="Roche">
+        <img src="./logos/Haleon.svg" alt="Haleon">
+        <img src="./logos/Reckitt.png" alt="Reckitt">
+        <img src="./logos/PPN.png" alt="PPN">
+        <img src="./logos/Telkom.png" alt="Telkom">
+        <img src="./logos/Kejari.png" alt="Kejari">
+        
+
+        <!-- duplicate for seamless loop -->
+
+        <img src="./logos/microsoft.png" alt="Microsoft">
+        <img src="./logos/HP.png" alt="HP">
+        <img src="./logos/Roche.png" alt="Roche">
+        <img src="./logos/Haleon.svg" alt="Haleon">
+        <img src="./logos/Reckitt.png" alt="Reckitt">
+        <img src="./logos/PPN.png" alt="PPN">
+        <img src="./logos/Telkom.png" alt="Telkom">
+        <img src="./logos/Kejari.png" alt="Kejari">
+        
+
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+
+</html>
+```
