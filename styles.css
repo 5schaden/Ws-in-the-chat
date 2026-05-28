@@ -21,6 +21,12 @@ body {
   font-family: "Inter", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+p {
+  margin: 0 0 24px;
 }
 
 a {
@@ -44,13 +50,13 @@ a {
 
 .brand {
   font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 .nav {
   display: flex;
   gap: 24px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--muted);
 }
 
@@ -100,8 +106,6 @@ a {
 }
 
 .lead {
-  font-size: 0.95rem;
-  line-height: 1.7;
   color: var(--text);
   margin: 0;
 }
@@ -116,7 +120,7 @@ a {
   gap: 14px;
   align-items: center;
   flex-wrap: wrap;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--text);
 }
 
@@ -190,11 +194,6 @@ a {
   .copy {
     padding-top: 0;
   }
-
-  .lead {
-    font-size: 1.01rem;
-    line-height: 1.8;
-  }
 }
 
 /* Contact page */
@@ -253,7 +252,7 @@ a {
 .desktop-nav {
   display: flex;
   gap: 28px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--muted);
 }
 
@@ -273,7 +272,7 @@ a {
 
 .group-title {
   font-family: "Cormorant Garamond", serif;
-  font-size: 2.2rem;
+  font-size: 2.25rem;
   font-weight: 500;
   margin: 0 0 22px;
   padding-top: 6px;
@@ -294,28 +293,26 @@ a {
 
 .writing h3 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 500;
   margin: 0 0 10px;
 }
 
 .meta {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--muted);
   margin-bottom: 18px;
 }
 
 .writing p {
   max-width: 680px;
-  font-size: 1rem;
-  line-height: 1.9;
   color: var(--muted);
   margin: 0 0 20px;
 }
 
 .read {
   display: inline-block;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .read:hover {
@@ -405,7 +402,7 @@ a {
   }
 
   .mobile-menu a {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--muted);
   }
 }
